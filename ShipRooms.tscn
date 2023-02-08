@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://brstl0s2amqx5"]
+
+[node name="Rooms" type="CSGCombiner3D"]
+operation = 2
+
+[node name="Oxygen Room" type="CSGBox3D" parent="."]
+transform = Transform3D(6.28005, 0, 0, 0, 1.89604, 0, 0, 0, 6.61823, 4.57859, 0.448, -0.41497)
+
+[node name="Reactor Room" type="CSGBox3D" parent="."]
+transform = Transform3D(6.28005, 0, 0, 0, 1.89604, 0, 0, 0, 6.61823, 13.0168, 0.448, -0.41497)
+
+[node name="Supply Room" type="CSGBox3D" parent="."]
+transform = Transform3D(3.68084, 0, 0, 0, 1.89604, 0, 0, 0, 2.41665, -3.32505, 0.448, 3.9271)
+
+[node name="Control Room" type="CSGBox3D" parent="."]
+transform = Transform3D(12.3898, 0, 0, 0, 1.89604, 0, 0, 0, 7.83249, -0.208712, 0.448, 9.82399)
+
+[node name="Weapons Room" type="CSGBox3D" parent="."]
+transform = Transform3D(6.50633, 0, 0, 0, 1.89604, 0, 0, 0, 6.56022, -8.71386, 0.448, 1.74114)
+
+[node name="Shields Room" type="CSGBox3D" parent="."]
+transform = Transform3D(4.11134, 0, 0, 0, 1.89604, 0, 0, 0, 4.54806, -14.5014, 0.448, -1.9842)
+
+[node name="Left Thruster Room" type="CSGBox3D" parent="."]
+transform = Transform3D(5.90801, 0, 0, 0, 1.89604, 0, 0, 0, 5.56709, 7.43981, 0.448, -7.27251)
+
+[node name="Right Thruster Room" type="CSGBox3D" parent="."]
+transform = Transform3D(5.90801, 0, 0, 0, 1.89604, 0, 0, 0, 5.56709, -8.95263, 0.448, -7.08913)
+
+[node name="Battery Room" type="CSGBox3D" parent="."]
+transform = Transform3D(3.88705, 0, 0, 0, 1.89604, 0, 0, 0, 4.0363, 12.9657, 0.448, -6.89433)
+
+[node name="Main Hall" type="CSGBox3D" parent="."]
+transform = Transform3D(1.35156, 0, 0, 0, 0.999999, 0, 0, 0, 7.79071, -0.208712, 0, 2.76778)
+
+[node name="Main Hall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-5.90786e-08, 0, 6.74712, 0, 0.999999, 0, -1.35156, 0, -2.94926e-07, -3.31677, 0, 1.60185)
+
+[node name="Main Hall3" type="CSGBox3D" parent="."]
+transform = Transform3D(-5.90786e-08, 0, 6.74712, 0, 0.999999, 0, -1.35156, 0, -2.94926e-07, 2.66797, 0, -0.446219)
+
+[node name="LeftWing Hall" type="CSGBox3D" parent="."]
+transform = Transform3D(-5.90786e-08, 0, 6.74712, 0, 0.999999, 0, -1.35156, 0, -2.94926e-07, 8.68739, 0, -0.446219)
+
+[node name="LeftWing Hall2" type="CSGBox3D" parent="."]
+transform = Transform3D(-1.35156, 0, -5.89852e-07, 0, 0.999999, 0, 1.18157e-07, 0, -6.74712, 8.79867, 0, -3.79423)
+
+[node name="LeftWing Hall3" type="CSGBox3D" parent="."]
+transform = Transform3D(-1.35156, 0, -5.89852e-07, 0, 0.999999, 0, 1.18157e-07, 0, -6.74712, 13.0188, 0, -3.91026)
+
+[node name="RightWing Hall" type="CSGBox3D" parent="."]
+transform = Transform3D(1.35156, 0, 0, 0, 0.999999, 0, 0, 0, 7.79071, -8.78934, 0, -2.65726)
+
+[node name="RightWing Hall2" type="CSGBox3D" parent="."]
+transform = Transform3D(1.35156, 0, 0, 0, 0.999999, 0, 0, 0, 10.6541, -14.505, 0, -1.92385)
+
+[node name="RightWing Hall3" type="CSGBox3D" parent="."]
+transform = Transform3D(-5.90786e-08, 0, 5.4767, 0, 0.999999, 0, -1.35156, 0, -2.39394e-07, -12.4438, 0, -7.33009)
+
+[node name="RightWing Hall4" type="CSGBox3D" parent="."]
+transform = Transform3D(-5.90786e-08, 0, 5.4767, 0, 0.999999, 0, -1.35156, 0, -2.39394e-07, -12.4427, 0, 2.848)
+
+[node name="Supply Hall" type="CSGBox3D" parent="."]
+transform = Transform3D(1.35156, 0, 0, 0, 0.999999, 0, 0, 0, 2.14353, -3.24964, 0, 5.66175)
+
+[node name="Oxygen Hall" type="CSGBox3D" parent="."]
+transform = Transform3D(1.35156, 0, 0, 0, 0.999999, 0, 0, 0, 5.18709, 2.88614, 0, 4.51728)
