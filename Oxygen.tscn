@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://tgcrxmspve6g"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tfjsg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ts7v3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_xwyhs"]
+
+[node name="Oxygen" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.61276, 0, 0, 0, 1.60203, 0, 0, 0, 0.49933, 0, 1.57502, 0)
+mesh = SubResource("CylinderMesh_tfjsg")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.33107, 0, 0, 0, 0.346886, 0, 0, 0, 3.33107, 0, 0, 0)
+mesh = SubResource("BoxMesh_ts7v3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.55989, 0, 0, 0, 1.55989, 0, 0, 0, 1.55989, 0.275025, 2.6676, 0.00649166)
+mesh = SubResource("SphereMesh_xwyhs")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.55989, 0, 0, 0, 1.55989, 0, 0, 0, 1.55989, -0.547936, 2.33257, 0.213191)
+mesh = SubResource("SphereMesh_xwyhs")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.55989, 0, 0, 0, 1.55989, 0, 0, 0, 1.55989, 0.246455, 2.26691, 0.449287)
+mesh = SubResource("SphereMesh_xwyhs")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.55989, 0, 0, 0, 1.55989, 0, 0, 0, 1.55989, 0.752136, 2.07043, -0.415485)
+mesh = SubResource("SphereMesh_xwyhs")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.55989, 0, 0, 0, 1.55989, 0, 0, 0, 1.55989, -0.313441, 2.12466, -0.6223)
+mesh = SubResource("SphereMesh_xwyhs")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1eo6i6pvonfi"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qfwje"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hy4uj"]
+
+[node name="Reactor" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("CapsuleMesh_qfwje")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D/MeshInstance3D"]
+transform = Transform3D(0.359755, 0, 0, 0, 0.874646, 0, 0, 0, 0.359755, 0, 1.25668, 0)
+mesh = SubResource("CylinderMesh_hy4uj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("CapsuleMesh_qfwje")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D/MeshInstance3D3"]
+transform = Transform3D(0.359755, 0, 0, 0, 0.874646, 0, 0, 0, 0.359755, 0, 1.25668, 0)
+mesh = SubResource("CylinderMesh_hy4uj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-8.46013e-08, 1.93545, -8.46013e-08, 0, -8.46013e-08, -1.93545, -1.93545, -8.46013e-08, 3.69804e-15, -0.19388, -0.00775272, 0.955393)
+mesh = SubResource("CapsuleMesh_qfwje")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bck8knxx8mnmc"]
+[gd_scene load_steps=4 format=3 uid="uid://bck8knxx8mnmc"]
 
 [ext_resource type="PackedScene" uid="uid://brstl0s2amqx5" path="res://ShipRooms.tscn" id="1_75j45"]
+[ext_resource type="PackedScene" uid="uid://d1eo6i6pvonfi" path="res://Reactor.tscn" id="2_4b0xy"]
+[ext_resource type="PackedScene" uid="uid://tgcrxmspve6g" path="res://Oxygen.tscn" id="3_gjl82"]
 
 [node name="Ship" type="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74773, 2.91088, -1.60419)
@@ -23,6 +25,7 @@ size = Vector3(3.39273, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 2.71308, 0, 0, 0, 1, -3.03222, 12.3307, -24.0084)
 
 [node name="Lights" type="Node3D" parent="."]
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8458, 13.0971, -22.1207)
@@ -59,3 +62,9 @@ omni_range = 3.754
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.23099, 13.0971, -20.1497)
 light_energy = 0.195
 omni_range = 3.346
+
+[node name="Reactor" parent="." instance=ExtResource("2_4b0xy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.5456, 11.736, -26.183)
+
+[node name="Oxygen" parent="." instance=ExtResource("3_gjl82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50387, 10.9741, -24.399)
