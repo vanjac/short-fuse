@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmauvn00jkt7e"]
+[gd_scene load_steps=11 format=3 uid="uid://cx6k0mgaxu0a0"]
 
 [ext_resource type="Script" path="res://Scripts/Switch.gd" id="1_wspr6"]
-[ext_resource type="Script" path="res://Scripts/Usable.gd" id="2_4v2ad"]
+[ext_resource type="Script" path="res://Scripts/Interactable.gd" id="2_lmftg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6uj1f"]
 size = Vector3(0.452, 0.21, 0.05)
@@ -65,7 +65,8 @@ _data = {
 script = ExtResource("1_wspr6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-script = ExtResource("2_4v2ad")
+collision_layer = 4
+script = ExtResource("2_lmftg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_6uj1f")
@@ -89,4 +90,4 @@ libraries = {
 "": SubResource("AnimationLibrary_5wk5d")
 }
 
-[connection signal="used" from="StaticBody3D" to="." method="_on_static_body_3d_used"]
+[connection signal="interacted" from="StaticBody3D" to="." method="_on_static_body_3d_interacted"]

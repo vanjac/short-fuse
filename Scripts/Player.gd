@@ -6,7 +6,7 @@ const SPEED = 5.0
 @export var sensitivity = 0.01 
 @export var sprint_multiplier = 1.5 
 var sprinting = false
-var grabbed_object = null
+var held_object = null
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -24,26 +24,31 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("sprint"):
 		sprinting = true
 	elif event.is_action_pressed("use"):
-		if grabbed_object != null: # if we are holding an object and click, set it down
-			grabbed_object = null
+		if held_object != null:
+			if camera.rotation.x <= deg_to_rad(-70):
+				# if we are holding an object and are looking at the ground, put it down
+				held_object._put_down()
+				held_object = null
+			else:
+				held_object._use();
 		else:
 			ray.force_raycast_update()
 			if ray.is_colliding():
 				var collider = ray.get_collider()
-				if collider.has_method("_use"):
-					collider._use()
-				elif collider.has_method("_grab"):
-					grabbed_object = collider
-				
-	if grabbed_object != null:
-		print("holding")
-		
-		
+				if collider.has_method("_interact"):
+					collider._interact()
+				elif collider.has_method("_pick_up"):
+					collider._pick_up()
+					held_object = collider
+	
+	if held_object != null:
+		held_object.position = neck.global_position
+
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			neck.rotate_y(-event.relative.x * sensitivity)
 			camera.rotate_x(-event.relative.y * sensitivity)
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 func _physics_process(delta):
 	# Add the gravity.

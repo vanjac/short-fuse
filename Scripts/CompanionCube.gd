@@ -11,5 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_rigid_body_3d_grabbed():
-	print("clicked")
+func _on_rigid_body_3d_used():
+	print("used")

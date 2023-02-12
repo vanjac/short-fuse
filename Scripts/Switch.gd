@@ -5,7 +5,7 @@ signal switch_off
 
 var on = false
 
-func _on_static_body_3d_used():
+func _on_static_body_3d_interacted():
 	on = not on
 	if on:
 		switch_on.emit()

@@ -49,6 +49,13 @@ use={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Ground"
+3d_physics/layer_2="Item"
+3d_physics/layer_3="Interactable"
+3d_physics/layer_4="Player"
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
