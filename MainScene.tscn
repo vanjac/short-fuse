@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxnxv3kb5u84q"]
+[gd_scene load_steps=8 format=3 uid="uid://bxnxv3kb5u84q"]
 
 [ext_resource type="PackedScene" uid="uid://cxtmq350n1c0u" path="res://Player.tscn" id="1_2o316"]
 [ext_resource type="PackedScene" uid="uid://bck8knxx8mnmc" path="res://Ship.tscn" id="2_ho3oj"]
+[ext_resource type="PackedScene" uid="uid://bgjmn0qhjt1q8" path="res://SwitchPanel.tscn" id="3_ci5ad"]
 [ext_resource type="PackedScene" uid="uid://7526mvoacvj4" path="res://HUD.tscn" id="4_5oehx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5soes"]
@@ -31,5 +32,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.43047, 16.8455, -15.5114)
 
 [node name="Ship" parent="." instance=ExtResource("2_ho3oj")]
+
+[node name="SwitchPanel" parent="." instance=ExtResource("3_ci5ad")]
 
 [node name="HUD" parent="." instance=ExtResource("4_5oehx")]

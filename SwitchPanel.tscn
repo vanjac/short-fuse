@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgjmn0qhjt1q8"]
+
+[ext_resource type="Script" path="res://SwitchController.gd" id="1_3ru2o"]
+[ext_resource type="PackedScene" uid="uid://bdo1fj4xbrt1e" path="res://Switch.tscn" id="2_45a31"]
+
+[node name="SwitchPanel" type="Node3D"]
+script = ExtResource("1_3ru2o")
+
+[node name="Switch1" parent="." instance=ExtResource("2_45a31")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1836, 15.607, -16.8815)
+
+[node name="Switch2" parent="." instance=ExtResource("2_45a31")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1836, 15.2962, -16.8815)
+
+[node name="Switch3" parent="." instance=ExtResource("2_45a31")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1836, 14.8916, -16.8815)
+
+[node name="Switch4" parent="." instance=ExtResource("2_45a31")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1836, 14.5376, -16.8815)
+
+[connection signal="switch_off" from="Switch1" to="." method="_on_switch_1_switch_off"]
+[connection signal="switch_on" from="Switch1" to="." method="_on_switch_1_switch_on"]
