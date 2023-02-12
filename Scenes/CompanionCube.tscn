@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqioq10404hgp"]
+
+[ext_resource type="Script" path="res://Scripts/CompanionCube.gd" id="1_6sitt"]
+[ext_resource type="Script" path="res://Scripts/Grabbable.gd" id="2_3doa1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xx6we"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0blec"]
+
+[node name="CompanionCube" type="Node3D"]
+script = ExtResource("1_6sitt")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 2
+script = ExtResource("2_3doa1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_xx6we")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_0blec")
+skeleton = NodePath("../..")
+
+[connection signal="grabbed" from="RigidBody3D" to="." method="_on_rigid_body_3d_grabbed"]

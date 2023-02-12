@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="short-fuse"
-run/main_scene="res://MainScene.tscn"
+run/main_scene="res://Scenes/MainScene.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Textures/icon.svg"
 
 [input]
 

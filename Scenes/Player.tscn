@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxtmq350n1c0u"]
+[gd_scene load_steps=4 format=3 uid="uid://20mm1noeypif"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_dvqpf"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_dvqpf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cgvdj"]
 
@@ -9,6 +9,7 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 4
 script = ExtResource("1_dvqpf")
 sensitivity = 0.003
 sprint_multiplier = 2.0
@@ -26,3 +27,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D"]
 target_position = Vector3(0, 0, -2.5)
+collision_mask = 3

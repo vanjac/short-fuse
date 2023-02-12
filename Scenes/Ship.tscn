@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bck8knxx8mnmc"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="PackedScene" uid="uid://brstl0s2amqx5" path="res://ShipRooms.tscn" id="1_75j45"]
-[ext_resource type="PackedScene" uid="uid://d1eo6i6pvonfi" path="res://Reactor.tscn" id="2_4b0xy"]
-[ext_resource type="PackedScene" uid="uid://tgcrxmspve6g" path="res://Oxygen.tscn" id="3_gjl82"]
+[ext_resource type="PackedScene" uid="uid://brstl0s2amqx5" path="res://Scenes/ShipRooms.tscn" id="1_75j45"]
+[ext_resource type="PackedScene" uid="uid://d1eo6i6pvonfi" path="res://Scenes/Reactor.tscn" id="2_4b0xy"]
+[ext_resource type="PackedScene" uid="uid://tgcrxmspve6g" path="res://Scenes/Oxygen.tscn" id="3_gjl82"]
 
 [node name="Ship" type="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74773, 2.91088, -1.60419)

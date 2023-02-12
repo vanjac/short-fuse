@@ -6,6 +6,7 @@ const SPEED = 5.0
 @export var sensitivity = 0.01 
 @export var sprint_multiplier = 1.5 
 var sprinting = false
+var grabbed_object = null
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -23,11 +24,21 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("sprint"):
 		sprinting = true
 	elif event.is_action_pressed("use"):
-		ray.force_raycast_update()
-		if ray.is_colliding():
-			var collider = ray.get_collider()
-			if collider.has_method("_use"):
-				collider._use()
+		if grabbed_object != null: # if we are holding an object and click, set it down
+			grabbed_object = null
+		else:
+			ray.force_raycast_update()
+			if ray.is_colliding():
+				var collider = ray.get_collider()
+				if collider.has_method("_use"):
+					collider._use()
+				elif collider.has_method("_grab"):
+					grabbed_object = collider
+				
+	if grabbed_object != null:
+		print("holding")
+		
+		
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			neck.rotate_y(-event.relative.x * sensitivity)

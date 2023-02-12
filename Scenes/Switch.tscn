@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bdo1fj4xbrt1e"]
+[gd_scene load_steps=11 format=3 uid="uid://cmauvn00jkt7e"]
 
-[ext_resource type="Script" path="res://Switch.gd" id="1_wspr6"]
-[ext_resource type="Script" path="res://Usable.gd" id="2_4v2ad"]
+[ext_resource type="Script" path="res://Scripts/Switch.gd" id="1_wspr6"]
+[ext_resource type="Script" path="res://Scripts/Usable.gd" id="2_4v2ad"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6uj1f"]
 size = Vector3(0.452, 0.21, 0.05)
