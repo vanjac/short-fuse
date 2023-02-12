@@ -11,16 +11,23 @@ var sprinting = false
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3D
+@onready var ray := $Neck/Camera3D/RayCast3D
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	elif event.is_action_pressed("ui_cancel"):
+
+	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	elif event.is_action_pressed("sprint"):
 		sprinting = true
-		
+	elif event.is_action_pressed("use"):
+		ray.force_raycast_update()
+		if ray.is_colliding():
+			var collider = ray.get_collider()
+			if collider.has_method("_use"):
+				collider._use()
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			neck.rotate_y(-event.relative.x * sensitivity)
