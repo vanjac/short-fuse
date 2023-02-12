@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhcbimkdnxvk7"]
+[gd_scene load_steps=2 format=3 uid="uid://dmxbxpt44jusk"]
 
-[ext_resource type="Script" path="res://Rooms.gd" id="1_irfwo"]
+[ext_resource type="Script" path="res://Scripts/Rooms.gd" id="1_3uors"]
 
 [node name="ControlPanelUI" type="CanvasLayer"]
 
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_irfwo")
+script = ExtResource("1_3uors")
 
 [node name="Button" type="Button" parent="."]
 visible = false

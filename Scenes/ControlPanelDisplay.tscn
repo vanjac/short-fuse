@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdttwhhjs0dai"]
 
-[ext_resource type="PackedScene" uid="uid://dhcbimkdnxvk7" path="res://ControlPanelUI.tscn" id="1_l5vrd"]
+[ext_resource type="PackedScene" uid="uid://dmxbxpt44jusk" path="res://Scenes/ControlPanelUI.tscn" id="1_l5vrd"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_sp4gm"]
 viewport_path = NodePath("ControlPanelDisplay/SubViewport")

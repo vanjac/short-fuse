@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://1ort5x586838"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://v0dbnl68ij3e" path="res://roundrect.png" id="1_mmmat"]
+[ext_resource type="Texture2D" uid="uid://v0dbnl68ij3e" path="res://Textures/roundrect.png" id="1_mmmat"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 offset_right = 64.0

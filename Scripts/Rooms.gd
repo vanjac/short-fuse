@@ -1,6 +1,6 @@
 extends Container
 
-var room_rect = preload("RoomRect.tscn")
+var room_rect = preload("../Scenes/RoomRect.tscn")
 
 func _ready():
 	var min_bound = null

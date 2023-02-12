@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v0dbnl68ij3e"
-path="res://.godot/imported/roundrect.png-5d6e7ad8db49042df26e5776d42a73c7.ctex"
+path="res://.godot/imported/roundrect.png-c2b87175021c935adf5df51a7baf4338.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://roundrect.png"
-dest_files=["res://.godot/imported/roundrect.png-5d6e7ad8db49042df26e5776d42a73c7.ctex"]
+source_file="res://Textures/roundrect.png"
+dest_files=["res://.godot/imported/roundrect.png-c2b87175021c935adf5df51a7baf4338.ctex"]
 
 [params]
 
